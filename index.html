@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dózsa Viktor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.7.0/dist/plyr.css" />
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -26,25 +27,25 @@
         .section {
             margin-bottom: 2rem;
         }
-        .albums, .tracks {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        .album, .track {
+        .upcoming .track {
             background-color: #282828;
             padding: 1rem;
             border-radius: 8px;
-            width: calc(33.333% - 1rem);
-            box-sizing: border-box;
-        }
-        .album img, .track img {
             width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .track img {
+            width: 100%;
+            max-width: 250px;
             border-radius: 8px;
         }
-        iframe {
-            width: 100%;
-            border: none;
+        .track h3 {
+            margin: 1rem 0;
         }
         footer {
             text-align: center;
@@ -74,7 +75,18 @@
             <p>Egy újabb pécsi zenész haha</p>
         </section>
 
-
+        <section class="section upcoming">
+            <h2>Hamarosan megjelenő zeném</h2>
+            <div class="track">
+                <img src="images/cover-bsz.jpg" alt="Zene borítója">
+                <h3>Beton Szerelem</h3>
+                <p>Fejjel estünk a betonra</p>
+                <audio id="player" controls>
+                    <source src="beton-szerelem-prev.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </section>
 
         <section class="section playlist">
             <h2>Hallgasd meg a zenéimet!</h2>
@@ -89,5 +101,10 @@
         <p>Kövess a közösségi médiában:</p>
         <a href="https://www.instagram.com/dozsaviktor/" target="_blank">Instagram</a> |
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.0/dist/plyr.min.js"></script>
+    <script>
+        const player = new Plyr('#player');
+    </script>
 </body>
 </html>
