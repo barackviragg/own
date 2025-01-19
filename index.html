@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dózsa Viktor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #fff;
+        }
+        header {
+            text-align: center;
+            padding: 2rem;
+            background-color: #1db954;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .content {
+            padding: 2rem;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+        .albums, .tracks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .album, .track {
+            background-color: #282828;
+            padding: 1rem;
+            border-radius: 8px;
+            width: calc(33.333% - 1rem);
+            box-sizing: border-box;
+        }
+        .album img, .track img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        iframe {
+            width: 100%;
+            border: none;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #1db954;
+            color: #fff;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Csövi</h1>
+        <p>Fedezd fel az új zenéimet és albumaimat!</p>
+    </header>
+
+    <div class="content">
+        <section class="section biography">
+            <h2>Ki vagyok?</h2>
+            <p>Egy újabb pécsi zenész haha</p>
+        </section>
+
+
+
+        <section class="section playlist">
+            <h2>Hallgasd meg a zenéimet!</h2>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/23cRVnDejVhVqUy26JKGGM?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </section>
+    </div>
+
+    <footer>
+        <h2>Elérhetőségeim</h2>
+        <p>Email: <a href="mailto:info@dozsaviktor.hu">info@dozsaviktor.hu</a>
+            <a href="mailto:satrumm@outlook.hu">satrumm@outlook.hu</a></p>
+        <p>Kövess a közösségi médiában:</p>
+        <a href="https://www.instagram.com/dozsaviktor/" target="_blank">Instagram</a> |
+    </footer>
+</body>
+</html>
